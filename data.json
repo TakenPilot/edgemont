@@ -1,0 +1,54 @@
+{
+  "title": "Edgemont",
+  "description":"",
+  "address": {
+    "streetAddress":"",
+    "addressLocality":"",
+    "addressRegion":"",
+    "postalCode":""
+  },
+  "telephone":"(555) 123-4567",
+  "email":"place@edgemont.com",
+  "openingHours":"Tuesdays and Thursdays 4-8pm",
+  "paymentAccepted":"Visa,Mastercard,Interact,Cash",
+  "acceptsReservations":"true",
+  "servesCuisine":"Chinese",
+  "priceRange":"$$",
+  "geo": {
+    "latitude":"30",
+    "longitude":"-130"
+  },
+  "hasMap": "mapurlhere",
+  "singleMenu": {
+    "name":"",
+    "description":"",
+    "groups": [{
+      "name":"",
+      "description":"",
+      "list":[
+        {
+          "name":"",
+          "description":"",
+          "price":"",
+          "image":""
+        }
+      ]
+    }]
+  },
+  "groupMenu":{
+    "name":"",
+    "description":"",
+    "groups": [{
+      "name":"",
+      "description":"",
+      "list":[
+        {
+          "name":"",
+          "description":"",
+          "price":"",
+          "image":""
+        }
+      ]
+    }]
+  }
+}

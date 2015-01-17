@@ -15,6 +15,7 @@
 <header>
   <div itemscope itemtype="http://schema.org/Restaurant">
     <h1 itemprop="name">{{title}}</h1>
+    <meta itemprop="description" value="{{description}}"/>
     <div property="address"  typeof="PostalAddress">
       <span property="streetAddress">{{address.street}}</span>
       <span property="addressLocality">{{address.city}}</span>,
@@ -28,11 +29,10 @@
       <!-- Tuesdays and Thursdays 4-8pm-->
     </time>
     <meta itemprop="paymentAccepted" value="Visa,Mastercard,Cash" />
-    <meta itemprop="priceRange" value="$$" />
-    <meta itemprop="acceptsReservations" value="true" />
-    <meta itemprop="servesCuisine" value="Chinese" />
-    <span itemprop="hasMap"></span>
-    <meta itemprop="description" value="{{description}}"/>
+    <meta itemprop="priceRange" value="{{priceRange}}" />
+    <meta itemprop="acceptsReservations" value="{{acceptsReservations}}" />
+    <meta itemprop="servesCuisine" value="{{servesCuisine}}" />
+    <a itemprop="hasMap" href="{{hasMap}}">Map</a>
     <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
       <meta itemprop="latitude" content="{{geo.latitude}}" />
       <meta itemprop="longitude" content="{{geo.longitude}}" />
@@ -61,7 +61,7 @@
       <span itemprop="description">{{description}}</span>
     </header>
 
-    {{#each menu.groups}}
+    {{#each singleMenu.groups}}
       <section>
         <header>
           <h1 itemprop="name">{{name}}</h1>
@@ -70,8 +70,8 @@
       {{#each list}}
         <div itemscope itemtype="http://schema.org/Thing">
           <span itemprop="name">{{name}}</span>
-          <span itemprop="price">{{price}}</span>
           <span itemprop="description">{{description}}</span>
+          <span itemprop="price">{{price}}</span>
           <span itemprop="image">{{image}}</span>
         </div>
       {{/each}}
@@ -85,7 +85,7 @@
       <span itemprop="description">{{description}}</span>
     </header>
 
-    {{#each menu.groups}}
+    {{#each groupMenu.groups}}
       <section>
         <header>
           <h1 itemprop="name">{{name}}</h1>
