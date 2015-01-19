@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>{{title}}</title>
+  <title>{{name}}</title>
   <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
   <link rel="canonical" href="http://mysite.com/" />
   <link rel="stylesheet" href="http://mysite.com/style.css" type="text/css" />
@@ -14,42 +14,31 @@
 <body>
 <header>
   <div itemscope itemtype="http://schema.org/Restaurant">
-    <h1 itemprop="name">{{title}}</h1>
+    <h1 itemprop="name">{{name}}</h1>
     <meta itemprop="description" value="{{description}}"/>
-    <div property="address"  typeof="PostalAddress">
-      <span property="streetAddress">{{address.street}}</span>
-      <span property="addressLocality">{{address.city}}</span>,
-      <span property="addressRegion">{{address.province}}</span>
-      <span property="postalCode">{{address.postalCode}}</span>
+    <div property="address" typeof="PostalAddress">
+      <span property="streetAddress">{{streetAddress}}</span>
+      <span property="addressLocality">{{addressLocality}}</span>,
+      <span property="addressRegion">{{addressRegion}}</span>
+      <span property="postalCode">{{postalCode}}</span>
     </div>
     <span itemprop="telephone">{{telephone}}</span>
     <a itemprop="email" href="mailto:{{email}}">Email Us</a>
-    <time itemprop="openingHours" datetime="{{openingHours}}">
-      {{openingHoursLabel}}
-      <!-- Tuesdays and Thursdays 4-8pm-->
-    </time>
-    <meta itemprop="paymentAccepted" value="Visa,Mastercard,Cash" />
-    <meta itemprop="priceRange" value="{{priceRange}}" />
+    <time itemprop="openingHours" datetime="{{openingHours1}}">{{openingHours1}}</time>
+    <time itemprop="openingHours" datetime="{{openingHours2}}">{{openingHours2}}</time>
+    <meta itemprop="paymentAccepted" value="{{paymentAccepted}}" />
     <meta itemprop="acceptsReservations" value="{{acceptsReservations}}" />
     <meta itemprop="servesCuisine" value="{{servesCuisine}}" />
     <a itemprop="hasMap" href="{{hasMap}}">Map</a>
-    <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
-      <meta itemprop="latitude" content="{{geo.latitude}}" />
-      <meta itemprop="longitude" content="{{geo.longitude}}" />
-    </div>
   </div>
 
   <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-  {{#each menu.groups}}
-    <div>
-      <span>{{name}}</span>
-    </div>
+  {{#each singleMenu}}
+    <span>{{@key}}</span>
   {{/each}}
 
-  {{#each groupMenu.groups}}
-    <div>
-      <span>{{name}}</span>
-    </div>
+  {{#each groupMenu}}
+    <span>{{@key}}</span>
   {{/each}}
   </nav>
 </header>
@@ -57,22 +46,22 @@
 <main>
   <section class="menu" itemscope itemtype="http://schema.org/Menu">
     <header>
-      <h1 itemprop="name">{{name}}</h1>
-      <span itemprop="description">{{description}}</span>
+      <h1 itemprop="name">{{singleMenuName}}</h1>
     </header>
 
-    {{#each singleMenu.groups}}
+    {{#each singleMenu}}
       <section>
         <header>
-          <h1 itemprop="name">{{name}}</h1>
-          <span itemprop="description">{{description}}</span>
+          <h1 itemprop="name">{{@key}}</h1>
         </header>
-      {{#each list}}
+      {{#each this}}
         <div itemscope itemtype="http://schema.org/Thing">
           <span itemprop="name">{{name}}</span>
-          <span itemprop="description">{{description}}</span>
-          <span itemprop="price">{{price}}</span>
-          <span itemprop="image">{{image}}</span>
+          {{#if description}}<span itemprop="description">{{description}}</span>{{/if}}
+          {{#if price-large}}<span itemprop="price">{{price-large}}</span>{{/if}}
+          {{#if price-regular}}<span itemprop="price">{{price-regular}}</span>{{/if}}
+          {{#if price-small}}<span itemprop="price">{{price-small}}</span>{{/if}}
+          {{#if image}}<span itemprop="image">{{image}}</span>{{/if}}
         </div>
       {{/each}}
       </section>
@@ -81,24 +70,22 @@
 
   <section class="group-menu">
     <header>
-      <h1 itemprop="name">{{name}}</h1>
-      <span itemprop="description">{{description}}</span>
+      <h1>{{groupMenuName}}</h1>
     </header>
 
-    {{#each groupMenu.groups}}
+    {{#each groupMenu}}
       <section>
         <header>
-          <h1 itemprop="name">{{name}}</h1>
-          <span itemprop="description">{{description}}</span>
+          <h1>{{@key}}</h1>
           <!-- select number of people, default is 4 -->
           <label>People <input type="range" value="4"/></label>
         </header>
-        {{#each list}}
-          <div itemscope itemtype="http://schema.org/Thing">
-            <span itemprop="name">{{name}}</span>
-            <span itemprop="price">{{price}}</span>
-            <span itemprop="description">{{description}}</span>
-            <span itemprop="image">{{image}}</span>
+        {{#each this}}
+          <div>
+            <span>{{name}}</span>
+            <span>{{price}}</span>
+            <span>{{description}}</span>
+            <span>{{image}}</span>
           </div>
         {{/each}}
       </section>
