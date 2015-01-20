@@ -1,5 +1,6 @@
-header {
-    background-color: purple;
+.page-container {
+  max-width: 800px;
+  margin: 10px auto;
 }
 
 nav {
@@ -21,4 +22,9 @@ nav .groupMenu {
   display: inline-block;
   vertical-align: top;
   width: 30%;
+}
+
+h3 {
+  width: 40%;
+  display: inline-block;
 }
