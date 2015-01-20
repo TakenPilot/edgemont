@@ -6,7 +6,7 @@ var gulp = require('gulp'),
   aside = require('gulp-aside'),
   cssmin = require('gulp-cssmin'),
   rename = require('gulp-rename'),
-  data = require('./data.json'),
+  serve = require('gulp-serve'),
   pkg = require('./package.json'),
   googleSpreadsheet = require('./googleSpreadsheet'),
   fs = Promise.promisifyAll(require('fs')),
@@ -34,8 +34,8 @@ gulp.task('pull', function (done) {
  */
 gulp.task('compare', function() {
   return Promise.join(
-    fs.readFileAsync('new-data.json'),
-    fs.readFileAsync('data.json')
+    fs.readFileAsync('new-data.json', {encoding: 'UTF8'}),
+    fs.readFileAsync('data.json', {encoding: 'UTF8'})
   ).spread(function (newData, data) {
       isNewData = !_.isEqual(newData, data);
       gutil.log('isNewData:', isNewData ? gutil.colors.green(isNewData): gutil.colors.red(isNewData));
@@ -46,7 +46,7 @@ gulp.task('compare', function() {
  * Copy new-data.json to data.json
  */
 gulp.task('accept', function () {
-  return fs.readFileAsync('new-data.json').then(function (data) {
+  return fs.readFileAsync('new-data.json', {encoding: 'UTF8'}).then(function (data) {
     return fs.writeFileAsync('data.json', data);
   });
 });
@@ -56,16 +56,17 @@ gulp.task('accept', function () {
  */
 gulp.task('build', function () {
   gulp.src('src/*')
-    .pipe(aside('**/*.hbs', hbs(data)))
+    .pipe(aside('**/*.hbs', hbs(fs.readFileAsync('data.json', {encoding: 'UTF8'}).then(JSON.parse))))
     .pipe(aside('**/*.hbs', rename({extname:'.html'})))
     .pipe(aside('**/*.css', cssmin()))
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('watch', function () {
+  gulp.watch('src/*', ['build']);
+})
+
 /**
  * Serve dist, whatever state
  */
-gulp.task('serve', function () {
-
-});
-
+gulp.task('serve', ['watch'], serve('dist'));

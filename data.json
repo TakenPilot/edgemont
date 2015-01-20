@@ -18,7 +18,7 @@
   "noDelivery": "No Delivery on orders under $15.00",
   "daysOpen": "Open 7 days a Week",
   "allergies": "Please notify us any allergies before ordering",
-  "menuName": "Menu",
+  "singleMenuName": "Menu",
   "groupMenuName": "Group Dinner Menu",
   "singleMenu": {
     "Appetizer": [
@@ -1036,15 +1036,13 @@
   },
   "groupMenu": {
     "Group Dinner": {
-      "Spring Rolls 2": [
+      "2": [
         {
           "category": "Group Dinner",
           "groupSize": "2",
           "name": "Spring Rolls 2",
           "price": "$29.00"
-        }
-      ],
-      "Stir Fried Mixed Vegetables": [
+        },
         {
           "category": "Group Dinner",
           "groupSize": "2",
@@ -1053,50 +1051,10 @@
         },
         {
           "category": "Group Dinner",
-          "groupSize": "3",
-          "name": "Stir Fried Mixed Vegetables",
-          "price": "$43.50"
-        }
-      ],
-      "Ginger Beef": [
-        {
-          "category": "Group Dinner",
           "groupSize": "2",
           "name": "Ginger Beef",
           "price": "$29.00"
         },
-        {
-          "category": "Group Dinner",
-          "groupSize": "3",
-          "name": "Ginger Beef",
-          "price": "$43.50"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "4",
-          "name": "Ginger Beef",
-          "price": "$58.00"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "5",
-          "name": "Ginger Beef",
-          "price": "$72.50"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "6",
-          "name": "Ginger Beef",
-          "price": "$87.00"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "7",
-          "name": "Ginger Beef",
-          "price": "$101.50"
-        }
-      ],
-      "Sweet & Sour Pork": [
         {
           "category": "Group Dinner",
           "groupSize": "2",
@@ -1105,78 +1063,50 @@
         },
         {
           "category": "Group Dinner",
-          "groupSize": "3",
-          "name": "Sweet & Sour Pork",
-          "price": "$43.50"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "4",
-          "name": "Sweet & Sour Pork",
-          "price": "$58.00"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "5",
-          "name": "Sweet & Sour Pork",
-          "price": "$72.50"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "6",
-          "name": "Sweet & Sour Pork",
-          "price": "$87.00"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "7",
-          "name": "Sweet & Sour Pork",
-          "price": "$101.50"
-        }
-      ],
-      "Chicken Fried Rice": [
-        {
-          "category": "Group Dinner",
           "groupSize": "2",
           "name": "Chicken Fried Rice",
           "price": "$29.00"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "3",
-          "name": "Chicken Fried Rice",
-          "price": "$43.50"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "4",
-          "name": "Chicken Fried Rice",
-          "price": "$58.00"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "5",
-          "name": "Chicken Fried Rice",
-          "price": "$72.50"
         }
       ],
-      "Spring Rolls 3": [
+      "3": [
         {
           "category": "Group Dinner",
           "groupSize": "3",
           "name": "Spring Rolls 3",
           "price": "$43.50"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "3",
+          "name": "Stir Fried Mixed Vegetables",
+          "price": "$43.50"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "3",
+          "name": "Ginger Beef",
+          "price": "$43.50"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "3",
+          "name": "Sweet & Sour Pork",
+          "price": "$43.50"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "3",
+          "name": "Chicken Fried Rice",
+          "price": "$43.50"
         }
       ],
-      "Spring Rolls 4": [
+      "4": [
         {
           "category": "Group Dinner",
           "groupSize": "4",
           "name": "Spring Rolls 4",
           "price": "$58.00"
-        }
-      ],
-      "Wonton Soup or Hot & Sour Soup": [
+        },
         {
           "category": "Group Dinner",
           "groupSize": "4",
@@ -1185,106 +1115,116 @@
         },
         {
           "category": "Group Dinner",
-          "groupSize": "5",
-          "name": "Wonton Soup or Hot & Sour Soup",
-          "price": "$72.50"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "6",
-          "name": "Wonton Soup or Hot & Sour Soup",
-          "price": "$87.00"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "7",
-          "name": "Wonton Soup or Hot & Sour Soup",
-          "price": "$101.50"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "8",
-          "name": "Wonton Soup or Hot & Sour Soup",
-          "price": "$116.00"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "9",
-          "name": "Wonton Soup or Hot & Sour Soup",
-          "price": "$130.50"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "10",
-          "name": "Wonton Soup or Hot & Sour Soup",
-          "price": "$145.00"
-        }
-      ],
-      "Beef Stir Fried Mixed Vegetables": [
-        {
-          "category": "Group Dinner",
           "groupSize": "4",
           "name": "Beef Stir Fried Mixed Vegetables",
           "price": "$58.00"
         },
         {
           "category": "Group Dinner",
-          "groupSize": "5",
-          "name": "Beef Stir Fried Mixed Vegetables",
-          "price": "$72.50"
+          "groupSize": "4",
+          "name": "Ginger Beef",
+          "price": "$58.00"
         },
         {
           "category": "Group Dinner",
-          "groupSize": "6",
-          "name": "Beef Stir Fried Mixed Vegetables",
-          "price": "$87.00"
+          "groupSize": "4",
+          "name": "Sweet & Sour Pork",
+          "price": "$58.00"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "4",
+          "name": "Chicken Fried Rice",
+          "price": "$58.00"
         }
       ],
-      "Spring Rolls 5": [
+      "5": [
         {
           "category": "Group Dinner",
           "groupSize": "5",
           "name": "Spring Rolls 5",
           "price": "$72.50"
-        }
-      ],
-      "Cantonese Chow Mein": [
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "5",
+          "name": "Wonton Soup or Hot & Sour Soup",
+          "price": "$72.50"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "5",
+          "name": "Beef Stir Fried Mixed Vegetables",
+          "price": "$72.50"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "5",
+          "name": "Ginger Beef",
+          "price": "$72.50"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "5",
+          "name": "Sweet & Sour Pork",
+          "price": "$72.50"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "5",
+          "name": "Chicken Fried Rice",
+          "price": "$72.50"
+        },
         {
           "category": "Group Dinner",
           "groupSize": "5",
           "name": "Cantonese Chow Mein",
           "price": "$72.50"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "6",
-          "name": "Cantonese Chow Mein",
-          "price": "$87.00"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "7",
-          "name": "Cantonese Chow Mein",
-          "price": "$101.50"
         }
       ],
-      "Spring Rolls 6": [
+      "6": [
         {
           "category": "Group Dinner",
           "groupSize": "6",
           "name": "Spring Rolls 6",
           "price": "$87.00"
-        }
-      ],
-      "Chicken Fried Rice (Large)": [
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "6",
+          "name": "Wonton Soup or Hot & Sour Soup",
+          "price": "$87.00"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "6",
+          "name": "Beef Stir Fried Mixed Vegetables",
+          "price": "$87.00"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "6",
+          "name": "Ginger Beef",
+          "price": "$87.00"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "6",
+          "name": "Sweet & Sour Pork",
+          "price": "$87.00"
+        },
         {
           "category": "Group Dinner",
           "groupSize": "6",
           "name": "Chicken Fried Rice (Large)",
           "price": "$87.00"
-        }
-      ],
-      "Lemon Soo Gai": [
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "6",
+          "name": "Cantonese Chow Mein",
+          "price": "$87.00"
+        },
         {
           "category": "Group Dinner",
           "groupSize": "6",
@@ -1292,15 +1232,19 @@
           "price": "$87.00"
         }
       ],
-      "Spring Rolls 7": [
+      "7": [
         {
           "category": "Group Dinner",
           "groupSize": "7",
           "name": "Spring Rolls 7",
           "price": "$101.50"
-        }
-      ],
-      "Beef Stir Fried Mixed Vegetables (Large)": [
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "7",
+          "name": "Wonton Soup or Hot & Sour Soup",
+          "price": "$101.50"
+        },
         {
           "category": "Group Dinner",
           "groupSize": "7",
@@ -1309,24 +1253,16 @@
         },
         {
           "category": "Group Dinner",
-          "groupSize": "8",
-          "name": "Beef Stir Fried Mixed Vegetables (Large)",
-          "price": "$116.00"
+          "groupSize": "7",
+          "name": "Ginger Beef",
+          "price": "$101.50"
         },
         {
           "category": "Group Dinner",
-          "groupSize": "9",
-          "name": "Beef Stir Fried Mixed Vegetables (Large)",
-          "price": "$130.50"
+          "groupSize": "7",
+          "name": "Sweet & Sour Pork",
+          "price": "$101.50"
         },
-        {
-          "category": "Group Dinner",
-          "groupSize": "10",
-          "name": "Beef Stir Fried Mixed Vegetables (Large)",
-          "price": "$145.00"
-        }
-      ],
-      "Young Chow Fried Rice (Large)": [
         {
           "category": "Group Dinner",
           "groupSize": "7",
@@ -1335,58 +1271,36 @@
         },
         {
           "category": "Group Dinner",
-          "groupSize": "8",
-          "name": "Young Chow Fried Rice (Large)",
-          "price": "$116.00"
+          "groupSize": "7",
+          "name": "Cantonese Chow Mein",
+          "price": "$101.50"
         },
-        {
-          "category": "Group Dinner",
-          "groupSize": "9",
-          "name": "Young Chow Fried Rice (Large)",
-          "price": "$130.50"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "10",
-          "name": "Young Chow Fried Rice (Large)",
-          "price": "$145.00"
-        }
-      ],
-      "Lemon Soo Gai (Large)": [
         {
           "category": "Group Dinner",
           "groupSize": "7",
           "name": "Lemon Soo Gai (Large)",
           "price": "$101.50"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "8",
-          "name": "Lemon Soo Gai (Large)",
-          "price": "$116.00"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "9",
-          "name": "Lemon Soo Gai (Large)",
-          "price": "$130.50"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "10",
-          "name": "Lemon Soo Gai (Large)",
-          "price": "$145.00"
         }
       ],
-      "Spring Rolls 8": [
+      "8": [
         {
           "category": "Group Dinner",
           "groupSize": "8",
           "name": "Spring Rolls 8",
           "price": "$116.00"
-        }
-      ],
-      "Ginger Beef (Large)": [
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "8",
+          "name": "Wonton Soup or Hot & Sour Soup",
+          "price": "$116.00"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "8",
+          "name": "Beef Stir Fried Mixed Vegetables (Large)",
+          "price": "$116.00"
+        },
         {
           "category": "Group Dinner",
           "groupSize": "8",
@@ -1395,38 +1309,16 @@
         },
         {
           "category": "Group Dinner",
-          "groupSize": "9",
-          "name": "Ginger Beef (Large)",
-          "price": "$130.50"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "10",
-          "name": "Ginger Beef (Large)",
-          "price": "$145.00"
-        }
-      ],
-      "Sweet & Sour Pork (Large)": [
-        {
-          "category": "Group Dinner",
           "groupSize": "8",
           "name": "Sweet & Sour Pork (Large)",
           "price": "$116.00"
         },
         {
           "category": "Group Dinner",
-          "groupSize": "9",
-          "name": "Sweet & Sour Pork (Large)",
-          "price": "$130.50"
+          "groupSize": "8",
+          "name": "Young Chow Fried Rice (Large)",
+          "price": "$116.00"
         },
-        {
-          "category": "Group Dinner",
-          "groupSize": "10",
-          "name": "Sweet & Sour Pork (Large)",
-          "price": "$145.00"
-        }
-      ],
-      "Cantonese Chow Mein (Large)": [
         {
           "category": "Group Dinner",
           "groupSize": "8",
@@ -1435,26 +1327,60 @@
         },
         {
           "category": "Group Dinner",
-          "groupSize": "9",
-          "name": "Cantonese Chow Mein (Large)",
-          "price": "$130.50"
-        },
-        {
-          "category": "Group Dinner",
-          "groupSize": "10",
-          "name": "Cantonese Chow Mein (Large)",
-          "price": "$145.00"
+          "groupSize": "8",
+          "name": "Lemon Soo Gai (Large)",
+          "price": "$116.00"
         }
       ],
-      "Spring Rolls 9": [
+      "9": [
         {
           "category": "Group Dinner",
           "groupSize": "9",
           "name": "Spring Rolls 9",
           "price": "$130.50"
-        }
-      ],
-      "BBQ Pork Shanghai Noodle": [
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "9",
+          "name": "Wonton Soup or Hot & Sour Soup",
+          "price": "$130.50"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "9",
+          "name": "Beef Stir Fried Mixed Vegetables (Large)",
+          "price": "$130.50"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "9",
+          "name": "Ginger Beef (Large)",
+          "price": "$130.50"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "9",
+          "name": "Sweet & Sour Pork (Large)",
+          "price": "$130.50"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "9",
+          "name": "Young Chow Fried Rice (Large)",
+          "price": "$130.50"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "9",
+          "name": "Cantonese Chow Mein (Large)",
+          "price": "$130.50"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "9",
+          "name": "Lemon Soo Gai (Large)",
+          "price": "$130.50"
+        },
         {
           "category": "Group Dinner",
           "groupSize": "9",
@@ -1462,15 +1388,55 @@
           "price": "$130.50"
         }
       ],
-      "Spring Rolls 10": [
+      "10": [
         {
           "category": "Group Dinner",
           "groupSize": "10",
           "name": "Spring Rolls 10",
           "price": "$145.00"
-        }
-      ],
-      "Prawns with Asparagus in Black Bean Sauce (Large)": [
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "10",
+          "name": "Wonton Soup or Hot & Sour Soup",
+          "price": "$145.00"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "10",
+          "name": "Beef Stir Fried Mixed Vegetables (Large)",
+          "price": "$145.00"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "10",
+          "name": "Ginger Beef (Large)",
+          "price": "$145.00"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "10",
+          "name": "Sweet & Sour Pork (Large)",
+          "price": "$145.00"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "10",
+          "name": "Young Chow Fried Rice (Large)",
+          "price": "$145.00"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "10",
+          "name": "Cantonese Chow Mein (Large)",
+          "price": "$145.00"
+        },
+        {
+          "category": "Group Dinner",
+          "groupSize": "10",
+          "name": "Lemon Soo Gai (Large)",
+          "price": "$145.00"
+        },
         {
           "category": "Group Dinner",
           "groupSize": "10",
@@ -1478,7 +1444,7 @@
           "price": "$145.00"
         }
       ],
-      "Minimum $2.00 Extra Charge per Change plus differences on All Group Dinners": [
+      "undefined": [
         {
           "category": "Group Dinner",
           "name": "Minimum $2.00 Extra Charge per Change plus differences on All Group Dinners",
@@ -1487,15 +1453,13 @@
       ]
     },
     "Seafood Group Dinner": {
-      "Deep Fried Prawns with Sweet and Sour Sauce 4": [
+      "2": [
         {
           "category": "Seafood Group Dinner",
           "groupSize": "2",
           "name": "Deep Fried Prawns with Sweet and Sour Sauce 4",
           "price": "$36.00"
-        }
-      ],
-      "Crab Meat with Corn Soup": [
+        },
         {
           "category": "Seafood Group Dinner",
           "groupSize": "2",
@@ -1504,86 +1468,10 @@
         },
         {
           "category": "Seafood Group Dinner",
-          "groupSize": "3",
-          "name": "Crab Meat with Corn Soup",
-          "price": "$54.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "4",
-          "name": "Crab Meat with Corn Soup",
-          "price": "$72.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "5",
-          "name": "Crab Meat with Corn Soup",
-          "price": "$90.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "6",
-          "name": "Crab Meat with Corn Soup",
-          "price": "$108.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "7",
-          "name": "Crab Meat with Corn Soup",
-          "price": "$126.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "8",
-          "name": "Crab Meat with Corn Soup",
-          "price": "$143.95"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "9",
-          "name": "Crab Meat with Corn Soup",
-          "price": "$162.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "10",
-          "name": "Crab Meat with Corn Soup",
-          "price": "$180.00"
-        }
-      ],
-      "Prawns & Scallops with Mixed Vegetables": [
-        {
-          "category": "Seafood Group Dinner",
           "groupSize": "2",
           "name": "Prawns & Scallops with Mixed Vegetables",
           "price": "$36.00"
         },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "3",
-          "name": "Prawns & Scallops with Mixed Vegetables",
-          "price": "$54.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "4",
-          "name": "Prawns & Scallops with Mixed Vegetables",
-          "price": "$72.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "5",
-          "name": "Prawns & Scallops with Mixed Vegetables",
-          "price": "$90.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "6",
-          "name": "Prawns & Scallops with Mixed Vegetables",
-          "price": "$108.00"
-        }
-      ],
-      "Chicken Fried Rice": [
         {
           "category": "Seafood Group Dinner",
           "groupSize": "2",
@@ -1592,148 +1480,168 @@
         },
         {
           "category": "Seafood Group Dinner",
-          "groupSize": "3",
-          "name": "Chicken Fried Rice",
-          "price": "$54.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "4",
-          "name": "Chicken Fried Rice",
-          "price": "$72.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "5",
-          "name": "Chicken Fried Rice",
-          "price": "$90.00"
-        }
-      ],
-      "Sweet & Sour Fish": [
-        {
-          "category": "Seafood Group Dinner",
           "groupSize": "2",
           "name": "Sweet & Sour Fish",
           "price": "$36.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "3",
-          "name": "Sweet & Sour Fish",
-          "price": "$54.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "4",
-          "name": "Sweet & Sour Fish",
-          "price": "$72.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "5",
-          "name": "Sweet & Sour Fish",
-          "price": "$90.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "6",
-          "name": "Sweet & Sour Fish",
-          "price": "$108.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "7",
-          "name": "Sweet & Sour Fish",
-          "price": "$126.00"
         }
       ],
-      "Deep Fried Prawns with Sweet and Sour Sauce 6": [
+      "3": [
         {
           "category": "Seafood Group Dinner",
           "groupSize": "3",
           "name": "Deep Fried Prawns with Sweet and Sour Sauce 6",
           "price": "$54.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "3",
+          "name": "Crab Meat with Corn Soup",
+          "price": "$54.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "3",
+          "name": "Prawns & Scallops with Mixed Vegetables",
+          "price": "$54.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "3",
+          "name": "Chicken Fried Rice",
+          "price": "$54.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "3",
+          "name": "Sweet & Sour Fish",
+          "price": "$54.00"
         }
       ],
-      "Deep Fried Prawns with Sweet and Sour Sauce 8": [
+      "4": [
         {
           "category": "Seafood Group Dinner",
           "groupSize": "4",
           "name": "Deep Fried Prawns with Sweet and Sour Sauce 8",
           "price": "$72.00"
-        }
-      ],
-      "Ginger Beef": [
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "4",
+          "name": "Crab Meat with Corn Soup",
+          "price": "$72.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "4",
+          "name": "Prawns & Scallops with Mixed Vegetables",
+          "price": "$72.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "4",
+          "name": "Chicken Fried Rice",
+          "price": "$72.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "4",
+          "name": "Sweet & Sour Fish",
+          "price": "$72.00"
+        },
         {
           "category": "Seafood Group Dinner",
           "groupSize": "4",
           "name": "Ginger Beef",
           "price": "$72.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "5",
-          "name": "Ginger Beef",
-          "price": "$90.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "6",
-          "name": "Ginger Beef",
-          "price": "$108.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "7",
-          "name": "Ginger Beef",
-          "price": "$126.00"
         }
       ],
-      "Deep Fried Prawns with Sweet and Sour Sauce 10": [
+      "5": [
         {
           "category": "Seafood Group Dinner",
           "groupSize": "5",
           "name": "Deep Fried Prawns with Sweet and Sour Sauce 10",
           "price": "$90.00"
-        }
-      ],
-      "Salt & Pepper Squids": [
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "5",
+          "name": "Crab Meat with Corn Soup",
+          "price": "$90.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "5",
+          "name": "Prawns & Scallops with Mixed Vegetables",
+          "price": "$90.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "5",
+          "name": "Chicken Fried Rice",
+          "price": "$90.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "5",
+          "name": "Sweet & Sour Fish",
+          "price": "$90.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "5",
+          "name": "Ginger Beef",
+          "price": "$90.00"
+        },
         {
           "category": "Seafood Group Dinner",
           "groupSize": "5",
           "name": "Salt & Pepper Squids",
           "price": "$90.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "6",
-          "name": "Salt & Pepper Squids",
-          "price": "$108.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "7",
-          "name": "Salt & Pepper Squids",
-          "price": "$126.00"
         }
       ],
-      "Deep Fried Prawns with Sweet and Sour Sauce 12": [
+      "6": [
         {
           "category": "Seafood Group Dinner",
           "groupSize": "6",
           "name": "Deep Fried Prawns with Sweet and Sour Sauce 12",
           "price": "$108.00"
-        }
-      ],
-      "Chicken Fried Rice (Large)": [
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "6",
+          "name": "Crab Meat with Corn Soup",
+          "price": "$108.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "6",
+          "name": "Prawns & Scallops with Mixed Vegetables",
+          "price": "$108.00"
+        },
         {
           "category": "Seafood Group Dinner",
           "groupSize": "6",
           "name": "Chicken Fried Rice (Large)",
           "price": "$108.00"
-        }
-      ],
-      "Cantonese Chow Mein": [
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "6",
+          "name": "Sweet & Sour Fish",
+          "price": "$108.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "6",
+          "name": "Ginger Beef",
+          "price": "$108.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "6",
+          "name": "Salt & Pepper Squids",
+          "price": "$108.00"
+        },
         {
           "category": "Seafood Group Dinner",
           "groupSize": "6",
@@ -1741,15 +1649,19 @@
           "price": "$108.00"
         }
       ],
-      "Deep Fried Prawns with Sweet and Sour Sauce 14": [
+      "7": [
         {
           "category": "Seafood Group Dinner",
           "groupSize": "7",
           "name": "Deep Fried Prawns with Sweet and Sour Sauce 14",
           "price": "$126.00"
-        }
-      ],
-      "Prawns & Scallops with Mixed Vegetables (Large)": [
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "7",
+          "name": "Crab Meat with Corn Soup",
+          "price": "$126.00"
+        },
         {
           "category": "Seafood Group Dinner",
           "groupSize": "7",
@@ -1758,84 +1670,60 @@
         },
         {
           "category": "Seafood Group Dinner",
-          "groupSize": "8",
-          "name": "Prawns & Scallops with Mixed Vegetables (Large)",
-          "price": "$143.95"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "9",
-          "name": "Prawns & Scallops with Mixed Vegetables (Large)",
-          "price": "$162.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "10",
-          "name": "Prawns & Scallops with Mixed Vegetables (Large)",
-          "price": "$180.00"
-        }
-      ],
-      "Young Chow Fried Rice (Large)": [
-        {
-          "category": "Seafood Group Dinner",
           "groupSize": "7",
           "name": "Young Chow Fried Rice (Large)",
           "price": "$126.00"
         },
         {
           "category": "Seafood Group Dinner",
-          "groupSize": "8",
-          "name": "Young Chow Fried Rice (Large)",
-          "price": "$143.95"
+          "groupSize": "7",
+          "name": "Sweet & Sour Fish",
+          "price": "$126.00"
         },
         {
           "category": "Seafood Group Dinner",
-          "groupSize": "9",
-          "name": "Young Chow Fried Rice (Large)",
-          "price": "$162.00"
+          "groupSize": "7",
+          "name": "Ginger Beef",
+          "price": "$126.00"
         },
         {
           "category": "Seafood Group Dinner",
-          "groupSize": "10",
-          "name": "Young Chow Fried Rice (Large)",
-          "price": "$180.00"
-        }
-      ],
-      "Cantonese Chow Mein (Large)": [
+          "groupSize": "7",
+          "name": "Salt & Pepper Squids",
+          "price": "$126.00"
+        },
         {
           "category": "Seafood Group Dinner",
           "groupSize": "7",
           "name": "Cantonese Chow Mein (Large)",
           "price": "$126.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "8",
-          "name": "Cantonese Chow Mein (Large)",
-          "price": "$143.95"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "9",
-          "name": "Cantonese Chow Mein (Large)",
-          "price": "$162.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "10",
-          "name": "Cantonese Chow Mein (Large)",
-          "price": "$180.00"
         }
       ],
-      "Deep Fried Prawns with Sweet and Sour Sauce 16": [
+      "8": [
         {
           "category": "Seafood Group Dinner",
           "groupSize": "8",
           "name": "Deep Fried Prawns with Sweet and Sour Sauce 16",
           "price": "$143.95"
-        }
-      ],
-      "Sweet & Sour Fish (Large)": [
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "8",
+          "name": "Crab Meat with Corn Soup",
+          "price": "$143.95"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "8",
+          "name": "Prawns & Scallops with Mixed Vegetables (Large)",
+          "price": "$143.95"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "8",
+          "name": "Young Chow Fried Rice (Large)",
+          "price": "$143.95"
+        },
         {
           "category": "Seafood Group Dinner",
           "groupSize": "8",
@@ -1844,38 +1732,10 @@
         },
         {
           "category": "Seafood Group Dinner",
-          "groupSize": "9",
-          "name": "Sweet & Sour Fish (Large)",
-          "price": "$162.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "10",
-          "name": "Sweet & Sour Fish (Large)",
-          "price": "$180.00"
-        }
-      ],
-      "Ginger Beef (Large)": [
-        {
-          "category": "Seafood Group Dinner",
           "groupSize": "8",
           "name": "Ginger Beef (Large)",
           "price": "$143.95"
         },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "9",
-          "name": "Ginger Beef (Large)",
-          "price": "$162.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "10",
-          "name": "Ginger Beef (Large)",
-          "price": "$180.00"
-        }
-      ],
-      "Salt & Pepper Squids (Large)": [
         {
           "category": "Seafood Group Dinner",
           "groupSize": "8",
@@ -1884,31 +1744,121 @@
         },
         {
           "category": "Seafood Group Dinner",
-          "groupSize": "9",
-          "name": "Salt & Pepper Squids (Large)",
-          "price": "$162.00"
-        },
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "10",
-          "name": "Salt & Pepper Squids (Large)",
-          "price": "$180.00"
+          "groupSize": "8",
+          "name": "Cantonese Chow Mein (Large)",
+          "price": "$143.95"
         }
       ],
-      "Deep Fried Prawns with Sweet and Sour Sauce 18": [
+      "9": [
         {
           "category": "Seafood Group Dinner",
           "groupSize": "9",
           "name": "Deep Fried Prawns with Sweet and Sour Sauce 18",
           "price": "$162.00"
-        }
-      ],
-      "BBQ Pork Shanghai Noodle": [
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "9",
+          "name": "Crab Meat with Corn Soup",
+          "price": "$162.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "9",
+          "name": "Prawns & Scallops with Mixed Vegetables (Large)",
+          "price": "$162.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "9",
+          "name": "Young Chow Fried Rice (Large)",
+          "price": "$162.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "9",
+          "name": "Sweet & Sour Fish (Large)",
+          "price": "$162.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "9",
+          "name": "Ginger Beef (Large)",
+          "price": "$162.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "9",
+          "name": "Salt & Pepper Squids (Large)",
+          "price": "$162.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "9",
+          "name": "Cantonese Chow Mein (Large)",
+          "price": "$162.00"
+        },
         {
           "category": "Seafood Group Dinner",
           "groupSize": "9",
           "name": "BBQ Pork Shanghai Noodle",
           "price": "$162.00"
+        }
+      ],
+      "10": [
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "10",
+          "name": "Deep Fried Prawns with Sweet and Sour Sauce 20",
+          "price": "$180.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "10",
+          "name": "Crab Meat with Corn Soup",
+          "price": "$180.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "10",
+          "name": "Prawns & Scallops with Mixed Vegetables (Large)",
+          "price": "$180.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "10",
+          "name": "Young Chow Fried Rice (Large)",
+          "price": "$180.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "10",
+          "name": "Sweet & Sour Fish (Large)",
+          "price": "$180.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "10",
+          "name": "Ginger Beef (Large)",
+          "price": "$180.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "10",
+          "name": "Salt & Pepper Squids (Large)",
+          "price": "$180.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "10",
+          "name": "Lemon Soo Gai (Large)",
+          "price": "$180.00"
+        },
+        {
+          "category": "Seafood Group Dinner",
+          "groupSize": "10",
+          "name": "Cantonese Chow Mein (Large)",
+          "price": "$180.00"
         },
         {
           "category": "Seafood Group Dinner",
@@ -1917,23 +1867,7 @@
           "price": "$180.00"
         }
       ],
-      "Deep Fried Prawns with Sweet and Sour Sauce 20": [
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "10",
-          "name": "Deep Fried Prawns with Sweet and Sour Sauce 20",
-          "price": "$180.00"
-        }
-      ],
-      "Lemon Soo Gai (Large)": [
-        {
-          "category": "Seafood Group Dinner",
-          "groupSize": "10",
-          "name": "Lemon Soo Gai (Large)",
-          "price": "$180.00"
-        }
-      ],
-      "Minimum $2.00 Extra Charge per Change plus differences on All Group Dinners": [
+      "undefined": [
         {
           "category": "Seafood Group Dinner",
           "name": "Minimum $2.00 Extra Charge per Change plus differences on All Group Dinners",
@@ -1942,35 +1876,19 @@
       ]
     },
     "Lobster Group Dinner": {
-      "Spring Rolls 2": [
+      "2": [
         {
           "category": "Lobster Group Dinner",
           "groupSize": "2",
           "name": "Spring Rolls 2",
           "price": "$49.00"
-        }
-      ],
-      "Live Lobster 1": [
+        },
         {
           "category": "Lobster Group Dinner",
           "groupSize": "2",
           "name": "Live Lobster 1",
           "price": "$49.00"
         },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "3",
-          "name": "Live Lobster 1",
-          "price": "$69.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "4",
-          "name": "Live Lobster 1",
-          "price": "$92.00"
-        }
-      ],
-      "Stir Fried Mixed Vegetables": [
         {
           "category": "Lobster Group Dinner",
           "groupSize": "2",
@@ -1979,78 +1897,42 @@
         },
         {
           "category": "Lobster Group Dinner",
-          "groupSize": "3",
-          "name": "Stir Fried Mixed Vegetables",
-          "price": "$69.00"
-        }
-      ],
-      "Ginger Beef": [
-        {
-          "category": "Lobster Group Dinner",
           "groupSize": "2",
           "name": "Ginger Beef",
           "price": "$49.00"
         },
         {
           "category": "Lobster Group Dinner",
-          "groupSize": "3",
-          "name": "Ginger Beef",
-          "price": "$69.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "4",
-          "name": "Ginger Beef",
-          "price": "$92.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "5",
-          "name": "Ginger Beef",
-          "price": "$115.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "6",
-          "name": "Ginger Beef",
-          "price": "$138.00"
-        }
-      ],
-      "Chicken Fried Rice": [
-        {
-          "category": "Lobster Group Dinner",
           "groupSize": "2",
           "name": "Chicken Fried Rice",
           "price": "$49.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "3",
-          "name": "Chicken Fried Rice",
-          "price": "$69.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "4",
-          "name": "Chicken Fried Rice",
-          "price": "$92.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "5",
-          "name": "Chicken Fried Rice",
-          "price": "$115.00"
         }
       ],
-      "Spring Rolls 3": [
+      "3": [
         {
           "category": "Lobster Group Dinner",
           "groupSize": "3",
           "name": "Spring Rolls 3",
           "price": "$69.00"
-        }
-      ],
-      "Sweet & Sour Pork": [
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "3",
+          "name": "Live Lobster 1",
+          "price": "$69.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "3",
+          "name": "Stir Fried Mixed Vegetables",
+          "price": "$69.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "3",
+          "name": "Ginger Beef",
+          "price": "$69.00"
+        },
         {
           "category": "Lobster Group Dinner",
           "groupSize": "3",
@@ -2059,32 +1941,18 @@
         },
         {
           "category": "Lobster Group Dinner",
-          "groupSize": "4",
-          "name": "Sweet & Sour Pork",
-          "price": "$92.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "5",
-          "name": "Sweet & Sour Pork",
-          "price": "$115.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "6",
-          "name": "Sweet & Sour Pork",
-          "price": "$138.00"
+          "groupSize": "3",
+          "name": "Chicken Fried Rice",
+          "price": "$69.00"
         }
       ],
-      "Deep Fried Prawns with Sweet and Sour Sauce(12)": [
+      "4": [
         {
           "category": "Lobster Group Dinner",
           "groupSize": "4",
           "name": "Deep Fried Prawns with Sweet and Sour Sauce(12)",
           "price": "$92.00"
-        }
-      ],
-      "Wonton Soup or Hot & Sour Soup": [
+        },
         {
           "category": "Lobster Group Dinner",
           "groupSize": "4",
@@ -2093,42 +1961,10 @@
         },
         {
           "category": "Lobster Group Dinner",
-          "groupSize": "5",
-          "name": "Wonton Soup or Hot & Sour Soup",
-          "price": "$115.00"
+          "groupSize": "4",
+          "name": "Live Lobster 1",
+          "price": "$92.00"
         },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "6",
-          "name": "Wonton Soup or Hot & Sour Soup",
-          "price": "$138.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "7",
-          "name": "Wonton Soup or Hot & Sour Soup",
-          "price": "$161.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "8",
-          "name": "Wonton Soup or Hot & Sour Soup",
-          "price": "$183.95"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "9",
-          "name": "Wonton Soup or Hot & Sour Soup",
-          "price": "$207.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "10",
-          "name": "Wonton Soup or Hot & Sour Soup",
-          "price": "$230.00"
-        }
-      ],
-      "Sliced Chicken with Mixed Vegetables": [
         {
           "category": "Lobster Group Dinner",
           "groupSize": "4",
@@ -2137,26 +1973,36 @@
         },
         {
           "category": "Lobster Group Dinner",
-          "groupSize": "5",
-          "name": "Sliced Chicken with Mixed Vegetables",
-          "price": "$115.00"
+          "groupSize": "4",
+          "name": "Ginger Beef",
+          "price": "$92.00"
         },
         {
           "category": "Lobster Group Dinner",
-          "groupSize": "6",
-          "name": "Sliced Chicken with Mixed Vegetables",
-          "price": "$138.00"
+          "groupSize": "4",
+          "name": "Sweet & Sour Pork",
+          "price": "$92.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "4",
+          "name": "Chicken Fried Rice",
+          "price": "$92.00"
         }
       ],
-      "Spring Rolls 5": [
+      "5": [
         {
           "category": "Lobster Group Dinner",
           "groupSize": "5",
           "name": "Spring Rolls 5",
           "price": "$115.00"
-        }
-      ],
-      "Live Lobster 2": [
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "5",
+          "name": "Wonton Soup or Hot & Sour Soup",
+          "price": "$115.00"
+        },
         {
           "category": "Lobster Group Dinner",
           "groupSize": "5",
@@ -2165,40 +2011,72 @@
         },
         {
           "category": "Lobster Group Dinner",
-          "groupSize": "6",
-          "name": "Live Lobster 2",
-          "price": "$138.00"
+          "groupSize": "5",
+          "name": "Sliced Chicken with Mixed Vegetables",
+          "price": "$115.00"
         },
         {
           "category": "Lobster Group Dinner",
-          "groupSize": "7",
-          "name": "Live Lobster 2",
-          "price": "$161.00"
+          "groupSize": "5",
+          "name": "Ginger Beef",
+          "price": "$115.00"
         },
         {
           "category": "Lobster Group Dinner",
-          "groupSize": "8",
-          "name": "Live Lobster 2",
-          "price": "$183.95"
+          "groupSize": "5",
+          "name": "Sweet & Sour Pork",
+          "price": "$115.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "5",
+          "name": "Chicken Fried Rice",
+          "price": "$115.00"
         }
       ],
-      "Spring Rolls 6": [
+      "6": [
         {
           "category": "Lobster Group Dinner",
           "groupSize": "6",
           "name": "Spring Rolls 6",
           "price": "$138.00"
-        }
-      ],
-      "Chicken Fried Rice (Large)": [
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "6",
+          "name": "Wonton Soup or Hot & Sour Soup",
+          "price": "$138.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "6",
+          "name": "Live Lobster 2",
+          "price": "$138.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "6",
+          "name": "Sliced Chicken with Mixed Vegetables",
+          "price": "$138.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "6",
+          "name": "Ginger Beef",
+          "price": "$138.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "6",
+          "name": "Sweet & Sour Pork",
+          "price": "$138.00"
+        },
         {
           "category": "Lobster Group Dinner",
           "groupSize": "6",
           "name": "Chicken Fried Rice (Large)",
           "price": "$138.00"
-        }
-      ],
-      "Cantonese Chow Mein": [
+        },
         {
           "category": "Lobster Group Dinner",
           "groupSize": "6",
@@ -2206,15 +2084,25 @@
           "price": "$138.00"
         }
       ],
-      "Spring Rolls 7": [
+      "7": [
         {
           "category": "Lobster Group Dinner",
           "groupSize": "7",
           "name": "Spring Rolls 7",
           "price": "$161.00"
-        }
-      ],
-      "Sliced Chicken with Mixed Vegetables (Large)": [
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "7",
+          "name": "Wonton Soup or Hot & Sour Soup",
+          "price": "$161.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "7",
+          "name": "Live Lobster 2",
+          "price": "$161.00"
+        },
         {
           "category": "Lobster Group Dinner",
           "groupSize": "7",
@@ -2223,50 +2111,10 @@
         },
         {
           "category": "Lobster Group Dinner",
-          "groupSize": "8",
-          "name": "Sliced Chicken with Mixed Vegetables (Large)",
-          "price": "$183.95"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "9",
-          "name": "Sliced Chicken with Mixed Vegetables (Large)",
-          "price": "$207.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "10",
-          "name": "Sliced Chicken with Mixed Vegetables (Large)",
-          "price": "$230.00"
-        }
-      ],
-      "Ginger Beef (Large)": [
-        {
-          "category": "Lobster Group Dinner",
           "groupSize": "7",
           "name": "Ginger Beef (Large)",
           "price": "$161.00"
         },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "8",
-          "name": "Ginger Beef (Large)",
-          "price": "$183.95"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "9",
-          "name": "Ginger Beef (Large)",
-          "price": "$207.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "10",
-          "name": "Ginger Beef (Large)",
-          "price": "$230.00"
-        }
-      ],
-      "Sweet & Sour Pork (Large)": [
         {
           "category": "Lobster Group Dinner",
           "groupSize": "7",
@@ -2275,84 +2123,66 @@
         },
         {
           "category": "Lobster Group Dinner",
-          "groupSize": "8",
-          "name": "Sweet & Sour Pork (Large)",
-          "price": "$183.95"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "9",
-          "name": "Sweet & Sour Pork (Large)",
-          "price": "$207.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "10",
-          "name": "Sweet & Sour Pork (Large)",
-          "price": "$230.00"
-        }
-      ],
-      "Young Chow Fried Rice (Large)": [
-        {
-          "category": "Lobster Group Dinner",
           "groupSize": "7",
           "name": "Young Chow Fried Rice (Large)",
           "price": "$161.00"
         },
         {
           "category": "Lobster Group Dinner",
-          "groupSize": "8",
-          "name": "Young Chow Fried Rice (Large)",
-          "price": "$183.95"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "9",
-          "name": "Young Chow Fried Rice (Large)",
-          "price": "$207.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "10",
-          "name": "Young Chow Fried Rice (Large)",
-          "price": "$230.00"
-        }
-      ],
-      "Cantonese Chow Mein (Large)": [
-        {
-          "category": "Lobster Group Dinner",
           "groupSize": "7",
           "name": "Cantonese Chow Mein (Large)",
           "price": "$161.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "8",
-          "name": "Cantonese Chow Mein (Large)",
-          "price": "$183.95"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "9",
-          "name": "Cantonese Chow Mein (Large)",
-          "price": "$207.00"
-        },
-        {
-          "category": "Lobster Group Dinner",
-          "groupSize": "10",
-          "name": "Cantonese Chow Mein (Large)",
-          "price": "$230.00"
         }
       ],
-      "Spring Rolls 8": [
+      "8": [
         {
           "category": "Lobster Group Dinner",
           "groupSize": "8",
           "name": "Spring Rolls 8",
           "price": "$183.95"
-        }
-      ],
-      "Lemon Soo Gai  (Large)": [
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "8",
+          "name": "Wonton Soup or Hot & Sour Soup",
+          "price": "$183.95"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "8",
+          "name": "Live Lobster 2",
+          "price": "$183.95"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "8",
+          "name": "Sliced Chicken with Mixed Vegetables (Large)",
+          "price": "$183.95"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "8",
+          "name": "Ginger Beef (Large)",
+          "price": "$183.95"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "8",
+          "name": "Sweet & Sour Pork (Large)",
+          "price": "$183.95"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "8",
+          "name": "Young Chow Fried Rice (Large)",
+          "price": "$183.95"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "8",
+          "name": "Cantonese Chow Mein (Large)",
+          "price": "$183.95"
+        },
         {
           "category": "Lobster Group Dinner",
           "groupSize": "8",
@@ -2360,15 +2190,19 @@
           "price": "$183.95"
         }
       ],
-      "Spring Rolls 9": [
+      "9": [
         {
           "category": "Lobster Group Dinner",
           "groupSize": "9",
           "name": "Spring Rolls 9",
           "price": "$207.00"
-        }
-      ],
-      "Live Lobster 3": [
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "9",
+          "name": "Wonton Soup or Hot & Sour Soup",
+          "price": "$207.00"
+        },
         {
           "category": "Lobster Group Dinner",
           "groupSize": "9",
@@ -2377,12 +2211,34 @@
         },
         {
           "category": "Lobster Group Dinner",
-          "groupSize": "10",
-          "name": "Live Lobster 3",
-          "price": "$230.00"
-        }
-      ],
-      "Lemon Soo Gai ": [
+          "groupSize": "9",
+          "name": "Sliced Chicken with Mixed Vegetables (Large)",
+          "price": "$207.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "9",
+          "name": "Ginger Beef (Large)",
+          "price": "$207.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "9",
+          "name": "Sweet & Sour Pork (Large)",
+          "price": "$207.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "9",
+          "name": "Young Chow Fried Rice (Large)",
+          "price": "$207.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "9",
+          "name": "Cantonese Chow Mein (Large)",
+          "price": "$207.00"
+        },
         {
           "category": "Lobster Group Dinner",
           "groupSize": "9",
@@ -2390,15 +2246,55 @@
           "price": "$207.00"
         }
       ],
-      "Peking Duck (one Course)": [
+      "10": [
         {
           "category": "Lobster Group Dinner",
           "groupSize": "10",
           "name": "Peking Duck (one Course)",
           "price": "$230.00"
-        }
-      ],
-      "Lemon Soo Gai": [
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "10",
+          "name": "Wonton Soup or Hot & Sour Soup",
+          "price": "$230.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "10",
+          "name": "Live Lobster 3",
+          "price": "$230.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "10",
+          "name": "Sliced Chicken with Mixed Vegetables (Large)",
+          "price": "$230.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "10",
+          "name": "Ginger Beef (Large)",
+          "price": "$230.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "10",
+          "name": "Sweet & Sour Pork (Large)",
+          "price": "$230.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "10",
+          "name": "Young Chow Fried Rice (Large)",
+          "price": "$230.00"
+        },
+        {
+          "category": "Lobster Group Dinner",
+          "groupSize": "10",
+          "name": "Cantonese Chow Mein (Large)",
+          "price": "$230.00"
+        },
         {
           "category": "Lobster Group Dinner",
           "groupSize": "10",
@@ -2406,7 +2302,7 @@
           "price": "$230.00"
         }
       ],
-      "Minimum $2.00 Extra Charge per Change plus differences on All Group Dinners": [
+      "undefined": [
         {
           "category": "Lobster Group Dinner",
           "name": "Minimum $2.00 Extra Charge per Change plus differences on All Group Dinners",

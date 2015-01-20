@@ -3,12 +3,7 @@
   <title>{{name}}</title>
   <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
   <link rel="canonical" href="http://mysite.com/" />
-  <link rel="stylesheet" href="http://mysite.com/style.css" type="text/css" />
-  <link rel="alternate" href="http://feeds.feedburner.com/feed" type="application/rss+xml" title="Direct Feed"/>
-  <link rel="shortcut icon" href="http://mysite.com/images/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon-precomposed" href="http://mysite.com/images/apple-retina.png" sizes="114x114" />
-  <link rel="apple-touch-icon-precomposed" href="http://mysite.com/images/apple-ipad.png" sizes="72x72" />
-  <link rel="apple-touch-icon" href="http://mysite.com/images/apple-touch.png" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
   <meta name="description" content="mysite html5 framework with scheme.org" />
 </head>
 <body>
@@ -33,13 +28,34 @@
   </div>
 
   <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-  {{#each singleMenu}}
-    <span>{{@key}}</span>
-  {{/each}}
+    <div class="singleMenu">
+      <h2>{{singleMenuName}}</h2>
+      {{#each singleMenu}}
+      <div><a href="#singleMenu{{@index}}">{{@key}}</a></div>
+      {{/each}}
+    </div>
 
-  {{#each groupMenu}}
-    <span>{{@key}}</span>
-  {{/each}}
+    <div class="groupMenu">
+      <h2>{{groupMenuName}}</h2>
+      <div>
+        Number of People
+        <select>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+        </select>
+      </div>
+      {{#each groupMenu}}
+        <div><a href="#groupMenu{{@index}}">{{@key}}</a></div>
+      {{/each}}
+    </div>
+
   </nav>
 </header>
 
@@ -52,6 +68,7 @@
     {{#each singleMenu}}
       <section>
         <header>
+          <a name="singleMenu{{@index}}"></a>
           <h1 itemprop="name">{{@key}}</h1>
         </header>
       {{#each this}}
@@ -76,17 +93,35 @@
     {{#each groupMenu}}
       <section>
         <header>
+          <a name="groupMenu{{@index}}"></a>
           <h1>{{@key}}</h1>
           <!-- select number of people, default is 4 -->
-          <label>People <input type="range" value="4"/></label>
+          <label>
+            <select>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+            People
+            </label>
         </header>
         {{#each this}}
-          <div>
-            <span>{{name}}</span>
-            <span>{{price}}</span>
-            <span>{{description}}</span>
-            <span>{{image}}</span>
-          </div>
+        <div data-group-size="{{@key}}" style="display:none">
+          {{#each this}}
+            <div>
+              <span>{{name}}</span>
+              <span>{{price}}</span>
+              <span>{{description}}</span>
+              <span>{{image}}</span>
+            </div>
+          {{/each}}
+        </div>
         {{/each}}
       </section>
     {{/each}}
@@ -96,5 +131,6 @@
 <footer>
 
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
