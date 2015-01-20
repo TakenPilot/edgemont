@@ -6,7 +6,7 @@ var gulp = require('gulp'),
   aside = require('gulp-aside'),
   cssmin = require('gulp-cssmin'),
   rename = require('gulp-rename'),
-  serve = require('gulp-serve'),
+  nodemon = require('gulp-nodemon'),
   pkg = require('./package.json'),
   googleSpreadsheet = require('./googleSpreadsheet'),
   fs = Promise.promisifyAll(require('fs')),
@@ -69,4 +69,10 @@ gulp.task('watch', function () {
 /**
  * Serve dist, whatever state
  */
-gulp.task('serve', ['watch'], serve('dist'));
+gulp.task('serve', ['watch'], function () {
+  return nodemon({ script: 'app.js', ext: 'html js css hbs', ignore: ['./dist/**', './node_modules/**'] })
+  //.on('change', ['lint'])
+  .on('restart', function () {
+    console.log('restarted!')
+  })
+});

@@ -26,16 +26,14 @@ io.on('connection', function (socket) {
   socket.on('disconnect', function(){
     log('user disconnected');
   });
-  socket.on('get styles', function (data, done) {
+  socket.on('get styles', function (data) {
     fs.readFileAsync('src/style.css', {encoding: 'UTF8'}).then(function (data) {
       socket.emit('styles', data);
-      done();
     });
   });
-  socket.on('put styles', function (data, done) {
-    fs.writeFileAsync('src/style.css', data).then(function (data) {
-      done();
-    });
+  socket.on('put styles', function (data) {
+    console.log('data to save', data);
+    fs.writeFileAsync('src/style.css', data);
   });
 });
 
