@@ -1,7 +1,8 @@
 <html>
 <head>
   <title>Editor</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css"
+    rel="stylesheet" type="text/css" />
 </head>
 <body>
   <style>
@@ -17,7 +18,9 @@
   <script src="https://cdn.socket.io/socket.io-1.3.0.js"></script>
   <script>
 
-  var socket = io();
+  var button = document.querySelector('button'),
+    editor = document.querySelector('.editor'),
+    socket = io();
   socket.on('news', function (data) {
     console.log(data);
     socket.emit('my other event', { my: 'data' });
@@ -26,35 +29,27 @@
     console.log(data);
   });
   socket.on('styles', function (data) {
-    document.querySelector('.editor').innerText = data;
+    editor.innerText = data;
     Prism.highlightAll();
   });
   socket.emit('get styles');
 
-  var button = document.querySelector('button').addEventListener('click', function () {
-    document.querySelector('button').disabled = true;
-    console.log('data to save', document.querySelector('.editor').innerText);
-    socket.emit('put styles', document.querySelector('.editor').innerText);
-  });
-
-  document.querySelector('.editor').addEventListener('blur', function () {
-    var text = document.querySelector('.editor').innerText;
-    document.querySelector('.editor').innerHTML = text;
-    Prism.highlightAll();
-    console.log('blur');
+  button.addEventListener('click', function () {
+    button.disabled = true;
+    socket.emit('put styles', editor.innerText);
   });
 
   function updateSyntaxHighlighter() {
-    var text = document.querySelector('.editor').innerText;
-    document.querySelector('.editor').innerHTML = text;
+    var text = editor.innerText;
+    editor.innerHTML = text;
     Prism.highlightAll();
-    document.querySelector('button').disabled = false;
+    button.disabled = false;
   }
 
-  document.querySelector('.editor').addEventListener('blur', updateSyntaxHighlighter);
-  document.querySelector('.editor').addEventListener('keyup', updateSyntaxHighlighter);
-  document.querySelector('.editor').addEventListener('paste', updateSyntaxHighlighter);
-  document.querySelector('.editor').addEventListener('input', updateSyntaxHighlighter);
+  editor.addEventListener('blur', updateSyntaxHighlighter);
+  editor.addEventListener('keyup', updateSyntaxHighlighter);
+  editor.addEventListener('paste', updateSyntaxHighlighter);
+  editor.addEventListener('input', updateSyntaxHighlighter);
 
   </script>
 </body>
