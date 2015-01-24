@@ -8,130 +8,132 @@
 </head>
 <body>
   <div class="page-container">
-    <header>
-      <div itemscope itemtype="http://schema.org/Restaurant">
-        <h1 itemprop="name">{{name}}</h1>
-        <meta itemprop="description" value="{{description}}"/>
-        <div property="address" typeof="PostalAddress">
-          <span property="streetAddress">{{streetAddress}}</span>
-          <span property="addressLocality">{{addressLocality}}</span>,
-          <span property="addressRegion">{{addressRegion}}</span>
-          <span property="postalCode">{{postalCode}}</span>
-        </div>
-        <span itemprop="telephone">{{telephone}}</span>
-        <a itemprop="email" href="mailto:{{email}}">Email Us</a>
-        <time itemprop="openingHours" datetime="{{openingHours1}}">{{openingHours1}}</time>
-        <time itemprop="openingHours" datetime="{{openingHours2}}">{{openingHours2}}</time>
-        <meta itemprop="paymentAccepted" value="{{paymentAccepted}}" />
-        <meta itemprop="acceptsReservations" value="{{acceptsReservations}}" />
-        <meta itemprop="servesCuisine" value="{{servesCuisine}}" />
-        <a itemprop="hasMap" href="{{hasMap}}">Map</a>
-      </div>
-
-      <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-        <div class="singleMenu">
-          <h2>{{singleMenuName}}</h2>
-          {{#each singleMenu}}
-          <div><a href="#singleMenu{{@index}}">{{@key}}</a></div>
-          {{/each}}
-        </div>
-
-        <div class="groupMenu">
-          <h2>{{groupMenuName}}</h2>
-          <div>
-            Number of People
-            <select>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-            </select>
+    <div class="page-container-inner">
+      <header>
+        <div itemscope itemtype="http://schema.org/Restaurant">
+          <h1 itemprop="name">{{name}}</h1>
+          <meta itemprop="description" value="{{description}}"/>
+          <div property="address" typeof="PostalAddress">
+            <span property="streetAddress">{{streetAddress}}</span>
+            <span property="addressLocality">{{addressLocality}}</span>,
+            <span property="addressRegion">{{addressRegion}}</span>
+            <span property="postalCode">{{postalCode}}</span>
           </div>
-          {{#each groupMenu}}
-            <div><a href="#groupMenu{{@index}}">{{@key}}</a></div>
-          {{/each}}
+          <span itemprop="telephone">{{telephone}}</span>
+          <a itemprop="email" href="mailto:{{email}}">Email Us</a>
+          <time itemprop="openingHours" datetime="{{openingHours1}}">{{openingHours1}}</time>
+          <time itemprop="openingHours" datetime="{{openingHours2}}">{{openingHours2}}</time>
+          <meta itemprop="paymentAccepted" value="{{paymentAccepted}}" />
+          <meta itemprop="acceptsReservations" value="{{acceptsReservations}}" />
+          <meta itemprop="servesCuisine" value="{{servesCuisine}}" />
+          <a itemprop="hasMap" href="{{hasMap}}">Map</a>
         </div>
 
-      </nav>
-    </header>
-
-    <main>
-      <section class="menu" itemscope itemtype="http://schema.org/Menu">
-        <header>
-          <h1 itemprop="name">{{singleMenuName}}</h1>
-        </header>
-
-        {{#each singleMenu}}
-          <section>
-            <header>
-              <a name="singleMenu{{@index}}"></a>
-              <h1 itemprop="name">{{@key}}</h1>
-            </header>
-          {{#each this}}
-            <div itemscope itemtype="http://schema.org/Thing">
-              <span itemprop="name">{{name}}</span>
-              {{#if description}}<span itemprop="description">{{description}}</span>{{/if}}
-              {{#if price-large}}<span itemprop="price">{{price-large}}</span>{{/if}}
-              {{#if price-regular}}<span itemprop="price">{{price-regular}}</span>{{/if}}
-              {{#if price-small}}<span itemprop="price">{{price-small}}</span>{{/if}}
-              {{#if image}}<span itemprop="image">{{image}}</span>{{/if}}
-            </div>
-          {{/each}}
-          </section>
-        {{/each}}
-      </section>
-
-      <section class="group-menu">
-        <header>
-          <h1>{{groupMenuName}}</h1>
-        </header>
-
-        {{#each groupMenu}}
-          <section>
-            <header>
-              <a name="groupMenu{{@index}}"></a>
-              <h3>{{@key}}</h1>
-              <!-- select number of people, default is 4 -->
-              <label>
-                <select>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10</option>
-                </select>
-                People
-                </label>
-            </header>
-            {{#each this}}
-            <div data-group-size="{{@key}}" style="display:none">
-              {{#each this}}
-                <div>
-                  <span>{{name}}</span>
-                  <span>{{price}}</span>
-                  <span>{{description}}</span>
-                  <span>{{image}}</span>
-                </div>
-              {{/each}}
-            </div>
+        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+          <div class="singleMenu">
+            <h2>{{singleMenuName}}</h2>
+            {{#each singleMenu}}
+            <div><a href="#singleMenu{{@index}}">{{@key}}</a></div>
             {{/each}}
-          </section>
-        {{/each}}
-      </section>
-    </main>
+          </div>
 
-    <footer>
+          <div class="groupMenu">
+            <h2>{{groupMenuName}}</h2>
+            <div>
+              Number of People
+              <select>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+            </div>
+            {{#each groupMenu}}
+              <div><a href="#groupMenu{{@index}}">{{@key}}</a></div>
+            {{/each}}
+          </div>
 
-    </footer>
+        </nav>
+      </header>
+
+      <main>
+        <section class="menu" itemscope itemtype="http://schema.org/Menu">
+          <header>
+            <h1 itemprop="name">{{singleMenuName}}</h1>
+          </header>
+
+          {{#each singleMenu}}
+            <section>
+              <header>
+                <a name="singleMenu{{@index}}"></a>
+                <h1 itemprop="name">{{@key}}</h1>
+              </header>
+            {{#each this}}
+              <div itemscope itemtype="http://schema.org/Thing">
+                <span itemprop="name">{{name}}</span>
+                {{#if description}}<span itemprop="description">{{description}}</span>{{/if}}
+                {{#if price-large}}<span itemprop="price">{{price-large}}</span>{{/if}}
+                {{#if price-regular}}<span itemprop="price">{{price-regular}}</span>{{/if}}
+                {{#if price-small}}<span itemprop="price">{{price-small}}</span>{{/if}}
+                {{#if image}}<span itemprop="image">{{image}}</span>{{/if}}
+              </div>
+            {{/each}}
+            </section>
+          {{/each}}
+        </section>
+
+        <section class="group-menu">
+          <header>
+            <h1>{{groupMenuName}}</h1>
+          </header>
+
+          {{#each groupMenu}}
+            <section>
+              <header>
+                <a name="groupMenu{{@index}}"></a>
+                <h3>{{@key}}</h1>
+                <!-- select number of people, default is 4 -->
+                <label>
+                  <select>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
+                  People
+                  </label>
+              </header>
+              {{#each this}}
+              <div data-group-size="{{@key}}" style="display:none">
+                {{#each this}}
+                  <div>
+                    <span>{{name}}</span>
+                    <span>{{price}}</span>
+                    <span>{{description}}</span>
+                    <span>{{image}}</span>
+                  </div>
+                {{/each}}
+              </div>
+              {{/each}}
+            </section>
+          {{/each}}
+        </section>
+      </main>
+
+      <footer>
+
+      </footer>
+    </div>
   </div>
 <script src="script.js"></script>
 </body>

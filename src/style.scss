@@ -1,6 +1,23 @@
+$background-color: #9E6000;
+$lightest-color: #FFDFAF;
+$light-color: #D8AF70;
+$dark-color: #855A1A;
+$darkest-color: #593702;
+
+body {
+  background: $background-color url('background.png');
+}
+
 .page-container {
+  padding: 0.1rem;
   max-width: 800px;
   margin: 10px auto;
+  background-color: $light-color;
+}
+
+.page-container-inner {
+  border: $dark-color dashed;
+  padding: 2rem;
 }
 
 nav {
@@ -29,9 +46,6 @@ h3 {
   display: inline-block;
 }
 
-h1 {
-  background-color: pink;
-}
 
 
 

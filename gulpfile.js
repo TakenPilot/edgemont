@@ -7,6 +7,7 @@ var gulp = require('gulp'),
   cssmin = require('gulp-cssmin'),
   rename = require('gulp-rename'),
   nodemon = require('gulp-nodemon'),
+  sass = require('gulp-sass'),
   pkg = require('./package.json'),
   googleSpreadsheet = require('./googleSpreadsheet'),
   fs = Promise.promisifyAll(require('fs')),
@@ -58,6 +59,7 @@ gulp.task('build', function () {
   gulp.src('src/*')
     .pipe(aside('**/*.hbs', hbs(fs.readFileAsync('data.json', {encoding: 'UTF8'}).then(JSON.parse))))
     .pipe(aside('**/*.hbs', rename({extname:'.html'})))
+    .pipe(aside('**/*.scss', sass()))
     .pipe(aside('**/*.css', cssmin()))
     .pipe(gulp.dest('dist'));
 });
