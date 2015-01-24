@@ -66,7 +66,7 @@ gulp.task('build', function () {
 
 gulp.task('watch', function () {
   gulp.watch('src/*', ['build']);
-})
+});
 
 /**
  * Serve dist, whatever state
@@ -76,5 +76,5 @@ gulp.task('serve', ['watch'], function () {
   //.on('change', ['lint'])
   .on('restart', function () {
     console.log('restarted!')
-  })
+  });
 });

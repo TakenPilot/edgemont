@@ -27,14 +27,14 @@ io.on('connection', function (socket) {
     log('user disconnected');
   });
   socket.on('get styles', function (data) {
-    fs.readFileAsync('src/style.css', {encoding: 'UTF8'}).then(function (data) {
+    fs.readFileAsync('src/style.scss', {encoding: 'UTF8'}).then(function (data) {
       socket.emit('styles', data);
     });
   });
   socket.on('put styles', function (data) {
     console.log('data to save', data);
-    fs.writeFileAsync('src/style.css', data);
+    fs.writeFileAsync('src/style.scss', data);
   });
 });
 
-http.listen(3000);
+http.listen(process.env.NODE_PORT || 3000);
