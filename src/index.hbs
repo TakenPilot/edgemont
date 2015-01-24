@@ -13,12 +13,12 @@
         <div itemscope itemtype="http://schema.org/Restaurant">
           <h1 itemprop="name">{{name}}</h1>
           <meta itemprop="description" value="{{description}}"/>
-          <div property="address" typeof="PostalAddress">
-            <span property="streetAddress">{{streetAddress}}</span>
-            <span property="addressLocality">{{addressLocality}}</span>,
-            <span property="addressRegion">{{addressRegion}}</span>
-            <span property="postalCode">{{postalCode}}</span>
-          </div>
+          <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">{{streetAddress}}</span>
+            <span itemprop="addressLocality">{{addressLocality}}</span>,
+            <span itemprop="addressRegion">{{addressRegion}}</span>
+            <span itemprop="postalCode">{{postalCode}}</span>
+          </address>
           <span itemprop="telephone">{{telephone}}</span>
           <a itemprop="email" href="mailto:{{email}}">Email Us</a>
           <time itemprop="openingHours" datetime="{{openingHours1}}">{{openingHours1}}</time>
@@ -74,7 +74,7 @@
                 <h1 itemprop="name">{{@key}}</h1>
               </header>
             {{#each this}}
-              <div itemscope itemtype="http://schema.org/Thing">
+              <div class="menu-item" itemscope itemtype="http://schema.org/Thing">
                 <span itemprop="name">{{name}}</span>
                 {{#if description}}<span itemprop="description">{{description}}</span>{{/if}}
                 {{#if price-large}}<span itemprop="price">{{price-large}}</span>{{/if}}
@@ -116,9 +116,9 @@
               {{#each this}}
               <div data-group-size="{{@key}}" style="display:none">
                 {{#each this}}
-                  <div>
+                  <div class="menu-item">
                     <span>{{name}}</span>
-                    <span>{{price}}</span>
+                    <span class="price">{{price}}</span>
                     <span>{{description}}</span>
                     <span>{{image}}</span>
                   </div>

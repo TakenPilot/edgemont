@@ -4,13 +4,22 @@ $light-color: #D8AF70;
 $dark-color: #855A1A;
 $darkest-color: #593702;
 
+@font-face {
+  font-family: DecoNeueLight;
+  src: url(DecoNeue-Light.otf);
+}
+
 body {
   background: $background-color url('background.png');
 }
 
+h1, h2, h3 {
+  font-family: DecoNeueLight, Helvetica, Times, serif;
+}
+
 .page-container {
   padding: 0.1rem;
-  max-width: 800px;
+  max-width: 600px;
   margin: 10px auto;
   background-color: $light-color;
 }
@@ -46,6 +55,26 @@ h3 {
   display: inline-block;
 }
 
+[itemprop=telephone] {
+  display: block;
+}
+
+[itemprop=email] {
+  display: block;
+}
+
+.menu-item {
+  position: relative;
+}
+
+[itemprop=price],.price {
+  position: absolute;
+  right: 0;
+}
+
+[itemprop=price] + [itemprop=price] {
+  right: 5rem;
+}
 
 
 
