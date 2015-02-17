@@ -11,6 +11,7 @@ var log = function () {};
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
+
 io.on('connection', function (socket) {
   log = function (data) {
     console.log(data);

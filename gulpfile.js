@@ -8,10 +8,15 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   nodemon = require('gulp-nodemon'),
   sass = require('gulp-sass'),
+  flickr = require('./flickr'),
   pkg = require('./package.json'),
   googleSpreadsheet = require('./googleSpreadsheet'),
   fs = Promise.promisifyAll(require('fs')),
   isNewData = false;
+
+gulp.task('pull-flickr', function(done) {
+  flickr.getImageList(pkg.config.flickr.userId);
+});
 
 /**
  * Pull data from source and save it to new-data.json

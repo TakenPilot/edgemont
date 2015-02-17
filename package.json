@@ -6,6 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "config": {
+    "flickr": {
+      "userId": "25572865@N03"
+    },
     "detail": {
       "key": "1jZzlOtwprlAD9apCebwWcCPRYztnzX7X3XzjWFuf2Nw"
     },
@@ -29,6 +32,7 @@
     "bluebird": "^2.7.1",
     "cssmin": "^0.4.2",
     "express": "^4.11.0",
+    "flickrapi": "^0.3.28",
     "gulp": "^3.8.10",
     "gulp-aside": "^1.0.1",
     "gulp-cssmin": "^0.1.6",
