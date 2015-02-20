@@ -14,10 +14,6 @@ var gulp = require('gulp'),
   fs = Promise.promisifyAll(require('fs')),
   isNewData = false;
 
-gulp.task('pull-flickr', function(done) {
-  flickr.getImageList(pkg.config.flickr.userId);
-});
-
 /**
  * Pull data from source and save it to new-data.json
  */
@@ -25,12 +21,14 @@ gulp.task('pull', function (done) {
   return Promise.join(
     googleSpreadsheet.getListByProperty(pkg.config.detail, 'name'),
     googleSpreadsheet.getList(pkg.config.singleMenu),
-    googleSpreadsheet.getList(pkg.config.groupMenu)
-  ).spread(function (details, singleMenu, groupMenu) {
+    googleSpreadsheet.getList(pkg.config.groupMenu),
+    flickr.getPhotoList(pkg.config.flickr.userId)
+  ).spread(function (details, singleMenu, groupMenu, photos) {
       details = _.mapValues(details, 'value');
 
       details.singleMenu = singleMenu;
       details.groupMenu = groupMenu;
+      details.photos = photos;
       return fs.writeFileAsync('new-data.json', JSON.stringify(details));
     });
 });
@@ -45,7 +43,7 @@ gulp.task('compare', function() {
   ).spread(function (newData, data) {
       isNewData = !_.isEqual(newData, data);
       gutil.log('isNewData:', isNewData ? gutil.colors.green(isNewData): gutil.colors.red(isNewData));
-    })
+    });
 });
 
 /**
@@ -54,6 +52,12 @@ gulp.task('compare', function() {
 gulp.task('accept', function () {
   return fs.readFileAsync('new-data.json', {encoding: 'UTF8'}).then(function (data) {
     return fs.writeFileAsync('data.json', data);
+  });
+});
+
+gulp.task('fetch-data-references', function () {
+  return fs.readFileAsync('data.json', {encoding: 'UTF8'}).then(JSON.parse).then(function (data) {
+    return flickr.getPhotosFromList(pkg.config.flickr.userId, data.photos, 'dist/img');
   });
 });
 
@@ -80,6 +84,6 @@ gulp.task('serve', ['watch'], function () {
   return nodemon({ script: 'app.js', ext: 'html js css hbs', ignore: ['./dist/**', './node_modules/**'] })
   //.on('change', ['lint'])
   .on('restart', function () {
-    console.log('restarted!')
+    console.log('restarted!');
   });
 });
