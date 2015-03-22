@@ -57,7 +57,7 @@ gulp.task('accept', function () {
 
 gulp.task('fetch-data-references', function () {
   return fs.readFileAsync('data.json', {encoding: 'UTF8'}).then(JSON.parse).then(function (data) {
-    return flickr.getPhotosFromList(pkg.config.flickr.userId, data.photos, 'dist/img');
+    return flickr.getPhotosFromList(pkg.config.flickr.userId, data.photos, 'dist/images');
   });
 });
 

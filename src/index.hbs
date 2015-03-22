@@ -10,6 +10,12 @@
   <div class="page-container">
     <div class="page-container-inner">
       <header>
+        <div class="gallery">
+          {{#each photos.photo}}
+            <div><img alt={{title}} src='images/{{farmName}}'/></div>
+          {{/each}}
+        </div>
+
         <div itemscope itemtype="http://schema.org/Restaurant">
           <h1 itemprop="name">{{name}}</h1>
           <meta itemprop="description" value="{{description}}"/>

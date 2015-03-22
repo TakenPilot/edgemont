@@ -11,22 +11,23 @@ var Promise = require('bluebird'),
   flickrOptions = {
     api_key: process.env.FLICKR_API_KEY,
     secret: process.env.FLICKR_SECRET
-  };
+  },
+  photoProperty = 'url_z';
 
-module.exports.getPhotosFromList = function (userId, photos, dist) {
-  return Flickr.tokenOnlyAsync(flickrOptions).then(function(flickr) {
+function mkdirSync(path) {
+  try {
+    fs.mkdirSync(path);
+  } catch(e) {
+    if ( e.code != 'EEXIST' ) throw e;
+  }
+}
 
-    console.log('flickr.options', require('util').inspect(
-      _.omit(flickr.options, ['api_key', 'secret']), true, 5)
-    );
-    console.log('photos', require('util').inspect(photos, true, 1));
-
-    return photos;
-  }).get('photo').map(function(photo) {
-    console.log('photo', require('util').inspect(photo, true, 5));
-
+function getPhotosFromList(userId, photos, dist) {
+  return Promise.resolve(photos).get('photo').map(function(photo) {
     var parsedUrl = url.parse(photo.url_z),
     promise = Promise.defer();
+
+    mkdirSync(dist);
 
     http.get({
       host: parsedUrl.host,
@@ -34,7 +35,7 @@ module.exports.getPhotosFromList = function (userId, photos, dist) {
       path: parsedUrl.pathname
     }, function (res) {
 
-      var file = fs.createWriteStream([dist, photo.title].join(path.sep));
+      var file = fs.createWriteStream([dist, photo.farmName].join(path.sep));
       res.on('data', function(data) {
           file.write(data);
         }).on('end', function() {
@@ -48,24 +49,34 @@ module.exports.getPhotosFromList = function (userId, photos, dist) {
 
     return promise;
   });
-};
+}
 
-module.exports.getPhotoList = function(userId) {
+function getPhotoList(userId) {
   return Flickr.tokenOnlyAsync(flickrOptions).then(function(flickr) {
-
-    console.log('flickr.options', require('util').inspect(
-      _.omit(flickr.options, ['api_key', 'secret']), true, 5)
-    );
-
     var getPublicPhotos = Promise.promisify(flickr.people.getPublicPhotos);
 
     return getPublicPhotos({
       user_id: userId,
       page: 1,
       per_page: 5,
-      extras: 'url_z'
+      extras: photoProperty
     });
-  }).get('photos').catch(function(err) {
-    console.error(err);
+  }).get('photos').then(function (photos) {
+    return Promise.all(photos.photo).map(function (photo) {
+
+      var farmExtension,
+        title = photo.title,
+        farmFileName = photo[photoProperty];
+
+      if (farmFileName) {
+        photo.farmName = farmFileName.split('/').pop();
+      } else {
+        throw new Error('missing farm reference for ' + JSON.stringify(photo));
+      }
+
+    }).return(photos);
   });
-};
+}
+
+module.exports.getPhotosFromList = getPhotosFromList;
+module.exports.getPhotoList = getPhotoList;
