@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>{{name}}</title>
+  <title>{{details.name.value}}</title>
   <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
   <link rel="canonical" href="http://mysite.com/" />
   <link rel="stylesheet" href="style.css" type="text/css" />
@@ -12,39 +12,46 @@
       <header>
         <div class="gallery">
           {{#each photos.photo}}
-            <div><img alt={{title}} src='images/{{farmName}}'/></div>
+            <div class="gallery-image">
+              <div class="gallery-image-title">{{title}}</div>
+              <img alt={{title}} src='images/{{farmName}}'/>
+            </div>
           {{/each}}
         </div>
 
         <div itemscope itemtype="http://schema.org/Restaurant">
-          <h1 itemprop="name">{{name}}</h1>
-          <meta itemprop="description" value="{{description}}"/>
+          <h1 itemprop="name">{{details.name.value}}</h1>
+          <meta itemprop="description" value="{{details.description.value}}"/>
           <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-            <span itemprop="streetAddress">{{streetAddress}}</span>
-            <span itemprop="addressLocality">{{addressLocality}}</span>,
-            <span itemprop="addressRegion">{{addressRegion}}</span>
-            <span itemprop="postalCode">{{postalCode}}</span>
+            <span itemprop="streetAddress">{{details.streetAddress.value}}</span>,
+            <span itemprop="addressLocality">{{details.addressLocality.value}}</span>,
+            <span itemprop="addressRegion">{{details.addressRegion.value}}</span>
+            <meta itemprop="postalCode" value="{{details.postalCode.value}}" />
           </address>
-          <span itemprop="telephone">{{telephone}}</span>
-          <a itemprop="email" href="mailto:{{email}}">Email Us</a>
-          <time itemprop="openingHours" datetime="{{openingHours1}}">{{openingHours1}}</time>
-          <time itemprop="openingHours" datetime="{{openingHours2}}">{{openingHours2}}</time>
-          <meta itemprop="paymentAccepted" value="{{paymentAccepted}}" />
-          <meta itemprop="acceptsReservations" value="{{acceptsReservations}}" />
-          <meta itemprop="servesCuisine" value="{{servesCuisine}}" />
-          <a itemprop="hasMap" href="{{hasMap}}">Map</a>
+          <span itemprop="telephone">{{details.telephone.value}}</span>
+          <a itemprop="email" href="mailto:{{details.email.value}}">Email Us</a>
+
+          <p>
+            Opening Hours:
+            <time itemprop="openingHours" datetime="{{details.openingHours1.value}}">{{details.openingHours1.value}}</time>
+            <time itemprop="openingHours" datetime="{{details.openingHours2.value}}">{{details.openingHours2.value}}</time>
+          </p>
+          <a itemprop="hasMap" target="_blank" href="{{details.mapUrl.value}}">Map</a>
+          <meta itemprop="paymentAccepted" value="{{details.paymentAccepted.value}}" />
+          <meta itemprop="acceptsReservations" value="{{details.acceptsReservations.value}}" />
+          <meta itemprop="servesCuisine" value="{{details.servesCuisine.value}}" />
         </div>
 
         <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
           <div class="singleMenu">
-            <h2>{{singleMenuName}}</h2>
+            <h2>{{details.singleMenuName.value}}</h2>
             {{#each singleMenu}}
             <div><a href="#singleMenu{{@index}}">{{@key}}</a></div>
             {{/each}}
           </div>
 
           <div class="groupMenu">
-            <h2>{{groupMenuName}}</h2>
+            <h2>{{details.groupMenuName.value}}</h2>
             <div>
               Number of People
               <select>
@@ -70,7 +77,7 @@
       <main>
         <section class="menu" itemscope itemtype="http://schema.org/Menu">
           <header>
-            <h1 itemprop="name">{{singleMenuName}}</h1>
+            <h1 itemprop="name">{{details.singleMenuName.value}}</h1>
           </header>
 
           {{#each singleMenu}}
@@ -95,14 +102,14 @@
 
         <section class="group-menu">
           <header>
-            <h1>{{groupMenuName}}</h1>
+            <h1>{{details.groupMenuName.value}}</h1>
           </header>
 
           {{#each groupMenu}}
             <section>
               <header>
                 <a name="groupMenu{{@index}}"></a>
-                <h3>{{@key}}</h1>
+                <h3>{{@key}}</h3>
                 <!-- select number of people, default is 4 -->
                 <label>
                   <select>
@@ -125,8 +132,6 @@
                   <div class="menu-item">
                     <span>{{name}}</span>
                     <span class="price">{{price}}</span>
-                    <span>{{description}}</span>
-                    <span>{{image}}</span>
                   </div>
                 {{/each}}
               </div>

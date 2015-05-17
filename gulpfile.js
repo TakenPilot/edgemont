@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp'),
   gutil = require('gulp-util'),
   _ = require('lodash'),
@@ -12,52 +14,52 @@ var gulp = require('gulp'),
   pkg = require('./package.json'),
   googleSpreadsheet = require('./googleSpreadsheet'),
   fs = Promise.promisifyAll(require('fs')),
-  isNewData = false;
+  isNewData = false,
+  dataSources = {
+    details: googleSpreadsheet.getListByProperty.bind(googleSpreadsheet, pkg.config.detail, 'name'),
+    singleMenu: googleSpreadsheet.getList.bind(googleSpreadsheet, pkg.config.singleMenu),
+    groupMenu: googleSpreadsheet.getList.bind(googleSpreadsheet, pkg.config.groupMenu),
+    photos: flickr.getPhotoList.bind(flickr, pkg.config.flickr.userId)
+  };
 
 /**
- * Pull data from source and save it to new-data.json
+ * Pull each data source.
  */
-gulp.task('pull', function (done) {
-  return Promise.join(
-    googleSpreadsheet.getListByProperty(pkg.config.detail, 'name'),
-    googleSpreadsheet.getList(pkg.config.singleMenu),
-    googleSpreadsheet.getList(pkg.config.groupMenu),
-    flickr.getPhotoList(pkg.config.flickr.userId)
-  ).spread(function (details, singleMenu, groupMenu, photos) {
-      details = _.mapValues(details, 'value');
-
-      details.singleMenu = singleMenu;
-      details.groupMenu = groupMenu;
-      details.photos = photos;
-      return fs.writeFileAsync('new-data.json', JSON.stringify(details));
+function pull() {
+  return Promise.props(_.mapValues(dataSources, function (fn) { return fn(); }))
+    .then(function (obj) {
+      return fs.writeFileAsync('new-data.json', JSON.stringify(obj)).return(obj);
     });
-});
+}
+
+/**
+ * Gets more specific information.
+ * @param newData
+ * @param oldData
+ * @returns {*}
+ */
+function fetch(newData, oldData) {
+  return flickr.getPhotosFromList(pkg.config.flickr.userId, newData.photos, 'dist/images');
+}
+
+function accept() {
+  return fs.readFileAsync('new-data.json', {encoding: 'UTF8'}).then(function (data) {
+    return fs.writeFileAsync('data.json', data);
+  });
+}
 
 /**
  * Successful if new-data.json is different than data.json
  */
-gulp.task('compare', function() {
-  return Promise.join(
-    fs.readFileAsync('new-data.json', {encoding: 'UTF8'}),
-    fs.readFileAsync('data.json', {encoding: 'UTF8'})
-  ).spread(function (newData, data) {
-      isNewData = !_.isEqual(newData, data);
-      gutil.log('isNewData:', isNewData ? gutil.colors.green(isNewData): gutil.colors.red(isNewData));
+gulp.task('update', function() {
+  return pull().then(function (newData) {
+    return fs.readFileAsync('data.json', {encoding: 'UTF8'}).then(function (oldData) {
+      if (!_.isEqual(newData, oldData)) {
+        return fetch(newData, oldData).then(function () {
+          return accept();
+        });
+      }
     });
-});
-
-/**
- * Copy new-data.json to data.json
- */
-gulp.task('accept', function () {
-  return fs.readFileAsync('new-data.json', {encoding: 'UTF8'}).then(function (data) {
-    return fs.writeFileAsync('data.json', data);
-  });
-});
-
-gulp.task('fetch-data-references', function () {
-  return fs.readFileAsync('data.json', {encoding: 'UTF8'}).then(JSON.parse).then(function (data) {
-    return flickr.getPhotosFromList(pkg.config.flickr.userId, data.photos, 'dist/images');
   });
 });
 

@@ -20,7 +20,7 @@ h1, h2, h3 {
 .page-container {
   padding: 0.1rem;
   max-width: 600px;
-  margin: 10px auto;
+  margin: 3rem auto 10px;
   background-color: $light-color;
 }
 
@@ -65,30 +65,62 @@ h3 {
 
 .menu-item {
   position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: flex-start;
+}
+
+.menu-item > * {
+  flex: 10 1 auto;
 }
 
 [itemprop=price],.price {
-  position: absolute;
-  right: 0;
+  flex: 0 0 4rem;
+  padding-left: 0.5rem;
+  text-align: right;
 }
 
-[itemprop=price] + [itemprop=price] {
-  right: 5rem;
+time[itemprop=openingHours] {
+  display: block;
+  margin-left: 2rem;
 }
 
 .gallery {
+  border: 1px solid $dark-color;
   max-height: 295px;
   position: relative;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  -ms-overflow-style: none;
 
-  img {
-    width: 100%;
-    height: auto;
+  .gallery-image {
+    position: relative;
+    display: inline-block;
+
+    .gallery-image-title {
+      position: absolute;
+      left: 1rem;
+      bottom: 3rem;
+      color: $lightest-color;
+      white-space: normal;
+      font-weight: normal;
+      letter-spacing: .15em;
+      text-shadow: 0 0 5px $dark-color;
+      font-size: 3rem;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
-  div {
-    display: inline-block;
+
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }

@@ -58,7 +58,7 @@ function getPhotoList(userId) {
     return getPublicPhotos({
       user_id: userId,
       page: 1,
-      per_page: 5,
+      per_page: 20,
       extras: photoProperty
     });
   }).get('photos').then(function (photos) {
