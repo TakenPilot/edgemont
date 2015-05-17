@@ -14,7 +14,6 @@ var gulp = require('gulp'),
   pkg = require('./package.json'),
   googleSpreadsheet = require('./googleSpreadsheet'),
   fs = Promise.promisifyAll(require('fs')),
-  isNewData = false,
   dataSources = {
     details: googleSpreadsheet.getListByProperty.bind(googleSpreadsheet, pkg.config.detail, 'name'),
     singleMenu: googleSpreadsheet.getList.bind(googleSpreadsheet, pkg.config.singleMenu),
