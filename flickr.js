@@ -54,7 +54,6 @@ function getPhotosFromList(userId, photos, dist) {
 function getPhotoList(userId) {
   return Flickr.tokenOnlyAsync(flickrOptions).then(function(flickr) {
     var getPublicPhotos = Promise.promisify(flickr.people.getPublicPhotos);
-
     return getPublicPhotos({
       user_id: userId,
       page: 1,
@@ -64,10 +63,7 @@ function getPhotoList(userId) {
   }).get('photos').then(function (photos) {
     return Promise.all(photos.photo).map(function (photo) {
 
-      var farmExtension,
-        title = photo.title,
-        farmFileName = photo[photoProperty];
-
+      var farmFileName = photo[photoProperty];
       if (farmFileName) {
         photo.farmName = farmFileName.split('/').pop();
       } else {

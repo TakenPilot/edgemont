@@ -29,7 +29,7 @@ function pull() {
   return Promise.props(_.mapValues(dataSources, function (fn) { return fn(); }))
     .then(function (obj) {
       return fs.writeFileAsync('new-data.json', JSON.stringify(obj)).return(obj);
-    });
+    }).tap(function () { console.log('finished pull'); });
 }
 
 /**
@@ -39,13 +39,14 @@ function pull() {
  * @returns {*}
  */
 function fetch(newData, oldData) {
-  return flickr.getPhotosFromList(pkg.config.flickr.userId, newData.photos, 'dist/images');
+  return flickr.getPhotosFromList(pkg.config.flickr.userId, newData.photos, 'dist/images')
+    .tap(function () { console.log('finished fetch'); });
 }
 
 function accept() {
   return fs.readFileAsync('new-data.json', {encoding: 'UTF8'}).then(function (data) {
     return fs.writeFileAsync('data.json', data);
-  });
+  }).tap(function () { console.log('finished accept'); });
 }
 
 /**
@@ -57,10 +58,10 @@ gulp.task('update', function() {
       if (!_.isEqual(newData, oldData)) {
         return fetch(newData, oldData).then(function () {
           return accept();
-        });
+        }).tap(function () { console.log('accepted'); });
       }
-    });
-  });
+    }).tap(function () { console.log('files updated'); });
+  }).tap(function () { console.log('finished update'); });
 });
 
 /**
