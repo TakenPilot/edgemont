@@ -24,19 +24,23 @@ function ease(element, propertyName, to, duration) {
   animateScroll();
 }
 
-function onSelectChange(e) {
-  var target = e.currentTarget || e.target;
-  console.log(target.value);
-
+function selectValue(value) {
   listenForChanges(false);
 
   for(var i = 0; i < selectList.length; i++) {
-    if (selectList[i].value !== target.value) {
-      selectList[i].value = target.value;
+    if (selectList[i].value !== value) {
+      selectList[i].value = value;
     }
   }
 
   listenForChanges(true);
+}
+
+function onSelectChange(e) {
+  var target = e.currentTarget || e.target;
+  console.log(target.value);
+
+  selectValue(target.value);
 
   displayGroup(target.value);
 }
@@ -65,6 +69,7 @@ function listenForChanges(isEnabled) {
 }
 
 listenForChanges(true);
+selectValue(selectList[0].value);
 displayGroup(selectList[0].value);
 
 var galleryScroll = true,
