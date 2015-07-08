@@ -10,6 +10,9 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   nodemon = require('gulp-nodemon'),
   sass = require('gulp-sass'),
+  awspublish = require('gulp-awspublish'),
+  awspublishRouter = require('gulp-awspublish-router'),
+  parallelize = require('concurrent-transform'),
   flickr = require('./flickr'),
   pkg = require('./package.json'),
   googleSpreadsheet = require('./googleSpreadsheet'),
@@ -49,6 +52,86 @@ function accept() {
 }
 
 /**
+ * @param options
+ */
+function publish(options) {
+  // create a new publisher
+  var publisher = awspublish.create({
+    key: process.env.AWS_ACCESS_KEY_ID,
+    secret: process.env.AWS_SECRET_ACCESS_KEY,
+    bucket: options.bucket,
+    region: options.region
+  });
+
+  //define custom headers
+  var headers = {
+    'Cache-Control': 'max-age=315360000, no-transform, public',
+    'Content-Encoding': 'gzip'
+  };
+
+  return gulp.src('./dist/**/*')
+
+    // gzip, Set Content-Encoding headers and add .gz extension
+    .pipe(awspublishRouter({
+      routes: {
+        '(.*html)$': {
+          gzip: true,
+          cacheTime: 630720000, //2 years
+          headers: {
+            'Content-Encoding': 'gzip',
+            'Content-Type': 'text/html'
+          }
+        },
+        '(.*js)$': {
+          gzip: true,
+          cacheTime: 630720000, //2 years
+          headers: {
+            'Content-Encoding': 'gzip',
+            'Content-Type': 'application/javascript'
+          }
+        },
+        '(.*css)$': {
+          gzip: true,
+          cacheTime: 630720000, //2 years
+          headers: {
+            'Content-Encoding': 'gzip',
+            'Content-Type': 'text/css'
+          }
+        },
+        '(.*webp)$': {
+          gzip: true,
+          cacheTime: 630720000, //2 years
+          headers: {
+            'Content-Encoding': 'gzip',
+            'Content-Type': 'image/webp'
+          }
+        },
+        '(.*ttf)$': {
+          gzip: true,
+          cacheTime: 630720000, //2 years
+          headers: {
+            'Content-Encoding': 'gzip',
+            'Content-Type': 'application/x-font-ttf'
+          }
+        },
+        '^.+$': '$&'
+      }
+    }))
+
+    // publisher will add Content-Length, Content-Type and  headers specified above
+    // If not specified it will set x-amz-acl to public-read by default
+    .pipe(parallelize(publisher.publish(headers), 10))
+
+    .pipe(publisher.sync())
+
+    // create a cache file to speed up consecutive uploads
+    .pipe(publisher.cache())
+
+    // print upload updates to console
+    .pipe(awspublish.reporter());
+}
+
+/**
  * Successful if new-data.json is different than data.json
  */
 gulp.task('update', function() {
@@ -60,7 +143,12 @@ gulp.task('update', function() {
         }).tap(function () { console.log('accepted'); });
       }
     }).tap(function () { console.log('files updated'); });
-  }).tap(function () { console.log('finished update'); });
+  }).tap(function () {
+    console.log('finished update');
+    _.defer(function () {
+      process.exit(0);
+    });
+  });
 });
 
 /**
@@ -88,4 +176,12 @@ gulp.task('serve', ['watch'], function () {
   .on('restart', function () {
     console.log('restarted!');
   });
+});
+
+gulp.task('deploy-production', function() {
+  return publish(pkg.config.s3.production);
+});
+
+gulp.task('deploy-development', function() {
+  return publish(pkg.config.s3.production);
 });
