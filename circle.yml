@@ -9,8 +9,8 @@ deployment:
   production: # just a label; label names are completely up to you
     branch: master
     commands:
-      - ./gulp deploy-production
+      - gulp deploy-production
   staging:
     branch: development
     commands:
-      - ./gulp deploy-development
+      - gulp deploy-development
