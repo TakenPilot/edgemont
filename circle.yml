@@ -1,0 +1,16 @@
+machine:
+  timezone:
+    America/New_York
+  node:
+dependencies:
+  pre:
+    - npm install -g gulp
+deployment:
+  production: # just a label; label names are completely up to you
+    branch: master
+    commands:
+      - ./gulp deploy-production
+  staging:
+    branch: development
+    commands:
+      - ./gulp deploy-development

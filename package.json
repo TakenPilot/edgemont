@@ -3,9 +3,19 @@
   "version": "1.0.0",
   "description": "Edgemont V2 ===========",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp update"
   },
   "config": {
+    "s3": {
+      "production": {
+        "bucket": "production.edgemont-city-website",
+        "region": "us-west-2"
+      },
+      "development": {
+        "bucket": "development.edgemont-city-website",
+        "region": "us-west-2"
+      }
+    },
     "flickr": {
       "userName": "jqbai99@yahoo.com",
       "userId": "131227089@N04"
@@ -45,5 +55,10 @@
     "lodash": "3.x",
     "lodash-deep": "1.x",
     "restler": "3.x"
+  },
+  "devDependencies": {
+    "concurrent-transform": "^1.0.0",
+    "gulp-awspublish": "^2.0.2",
+    "gulp-awspublish-router": "^0.1.1"
   }
 }
